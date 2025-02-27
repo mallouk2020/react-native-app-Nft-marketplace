@@ -11,12 +11,22 @@ import {
   import NFTAvatars from "./NFTAvatars";
   import NFTTitle from "./NFTTitle";
   import NFTInfo from "./NFTInfo";
-  import { useNavigation } from "@react-navigation/native";
+import { useRouter } from "expo-router";
+  // import { useNavigation } from "@react-navigation/native";
+
+
+
   const NFTCard = ({ NFTData }) => {
-    const navigation = useNavigation();
+const router =useRouter()
+    // const navigation = useNavigation();
+
+
     const pressHandler = () => {
-      navigation.navigate("NFT-details", { NFTData });
-    };
+      // navigation.navigate("NFT-details", { NFTData });
+      router.push({
+        pathname: '/NFTDetails',
+        params: { data: JSON.stringify(NFTData) }, // تحويل الكائن إلى نص JSON
+      });    };
     return (
       <TouchableWithoutFeedback>
         <SafeAreaView style={styles.container}>

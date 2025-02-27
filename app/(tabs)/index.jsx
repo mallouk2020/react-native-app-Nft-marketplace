@@ -9,7 +9,7 @@ import nft08 from "../../assets/images/nft08.jpg";
 import nft06 from "../../assets/images/nft06.jpg";
 import nft04 from "../../assets/images/nft04.jpg";
 import Button from "../../components/Button";
-import { useNavigation } from "@react-navigation/native";
+// import { useNavigation } from "@react-navigation/native";
 
 
 
