@@ -8,7 +8,7 @@ import NFTInfo from "../../components/NFTInfo";
 import NFTMoreinfo from "../../components/NFTMoreInfo";
 import { FontAwesome } from "@expo/vector-icons";
 import Button from "../../components/Button";
-import { useLocalSearchParams } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 
 const NFTDetails = () => {
   const params = useLocalSearchParams();
@@ -20,8 +20,10 @@ const NFTDetails = () => {
   /**
    * @desc go back to home
    */
+  const router = useRouter();
+
   const pressHandler = () => {
-    navigation.goBack();
+    router.back();
   };
 
   const moveAnimationHandler = () => {
